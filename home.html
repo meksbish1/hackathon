@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Webedu</title>
+    <link rel="stylesheet" href="styles1.css" />
+    <style>
+      .designer-details {
+        display: none;
+      }
+      .designer-card {
+        position: relative;
+        width: 309.62px;
+        height: 450px;
+        margin: 0 10px;
+      }
+      .designer-image {
+        width: 100%;
+        height: auto;
+        border-radius: 9999px;
+        border: 5.79px #a1d6b2 solid;
+      }
+      .learn-more-btn {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #6c9dc6;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="menu-bar">
+      <img src="images/images/logo.png" alt="Logo" id="logo" />
+
+      <a href="#" class="menu-item">HOME</a>
+      <div class="menu-item dropdown">
+        <a href="#" class="dropdown-btn">ANALYTICS</a>
+        <div class="dropdown-content">
+          <a href="#">Pomodoro Timer</a>
+          <a href="#">Quizzes</a>
+        </div>
+      </div>
+      <a href="search.html" class="menu-item">SEARCH</a>
+      <a href="register.html" class="login-btn">LOGIN</a>
+    </div>
+
+    <div class="content">
+      <!-- Home Section -->
+      <section id="home" class="home-section">
+        <h1>Welcome to Webedu</h1>
+        <p class="tagline">Experience Future Learning</p>
+        <img
+          src="images/images/hero.png"
+          alt="Home Banner"
+          class="home-banner"
+        />
+      </section>
+
+      <!-- Features Section -->
+      <section id="features" class="features-section">
+        <div class="feature-card">
+          <img
+            src="images/images/24_hour.png"
+            alt="24 HR Learning"
+            class="feature-image"
+          />
+        </div>
+        <div class="feature-card">
+          <img
+            src="images/images/file.png"
+            alt="Resource Library"
+            class="feature-image"
+          />
+        </div>
+        <div class="feature-card">
+          <img
+            src="images/images/colab.png"
+            alt="Collaborative Tools"
+            class="feature-image"
+          />
+        </div>
+      </section>
+
+      <!-- About Us Section -->
+      <section id="about-us" class="about-us-section">
+        <h2>About Us</h2>
+        <p>
+          At Webedu, our goal is to revolutionize education with innovative
+          AI-driven solutions. Our team of experts is dedicated to crafting an
+          exceptional learning experience tailored to your needs.
+        </p>
+        <br />
+        <br />
+        <div class="about-team">
+          <div class="designer-card">
+            <img
+              src="images/images/tm1.png"
+              alt="Krunal Mehta"
+              class="designer-image"
+            />
+            <h3>Krunal Mehta</h3>
+            <button class="learn-more-btn" onclick="toggleDetails('krunal')">
+              Learn More
+            </button>
+            <div id="krunal" class="designer-details">
+              <p>
+                Krunal Mehta is a Backend Developer specializing in developing
+                robust server-side solutions focusing on efficiency and
+                security.
+              </p>
+            </div>
+          </div>
+          <div class="designer-card">
+            <img
+              src="images/images/tm1.png"
+              alt="Manan Uttekar"
+              class="designer-image"
+            />
+            <h3>Manan Uttekar</h3>
+            <button class="learn-more-btn" onclick="toggleDetails('manan')">
+              Learn More
+            </button>
+            <div id="manan" class="designer-details">
+              <p>
+                Manan Uttekar is a Backend Developer who builds reliable,
+                scalable systems that ensure smooth performance and reliability.
+              </p>
+            </div>
+          </div>
+          <div class="designer-card">
+            <img
+              src="images/images/tm2.png"
+              alt="Tisha Sachwani"
+              class="designer-image"
+            />
+            <h3>Tisha Sachwani</h3>
+            <button class="learn-more-btn" onclick="toggleDetails('tisha')">
+              Learn More
+            </button>
+            <div id="tisha" class="designer-details">
+              <p>
+                Tisha Sachwani is a UI/UX Designer and Frontend Developer
+                specializing in creating visually appealing and user-centric
+                designs.
+              </p>
+            </div>
+          </div>
+          <div class="designer-card">
+            <img
+              src="images/images/tm2.png"
+              alt="Mahek Lineswala"
+              class="designer-image"
+            />
+            <h3>Mahek Lineswala</h3>
+            <button class="learn-more-btn" onclick="toggleDetails('mahek')">
+              Learn More
+            </button>
+            <div id="mahek" class="designer-details">
+              <p>
+                Mahek Lineswala is a UI/UX Designer who designs intuitive,
+                visually cohesive interfaces that enhance user experience.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script>
+      function toggleDetails(id) {
+        const details = document.getElementById(id);
+        if (details.style.display === "none" || details.style.display === "") {
+          details.style.display = "block";
+        } else {
+          details.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>
